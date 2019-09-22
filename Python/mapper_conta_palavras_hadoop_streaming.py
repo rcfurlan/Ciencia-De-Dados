@@ -11,6 +11,15 @@ $ hadoop jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar
  -input entrada_ContaPalavras.txt                       (fazer o upload do arquivo para o HDFS antes)
  -output ContaPalavras                                  (gera saida no HDFS)
  
+ou
+
+$ hadoop jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar 
+ -files /home/maria_dev/hadoop_streaming/mapper_hs.py,/home/maria_dev/hadoop_streaming/reducer_hs.py   (envia o arquivo a cada nó do cluster antes do processamento, caso contrario é assumido que já estão lá)
+ -mapper "python mapper_hs.py" 
+ -reducer "python reducer_hs.py" 
+ -input entrada_ContaPalavras.txt                       (fazer o upload do arquivo para o HDFS antes)
+ -output ContaPalavras                                  (gera saida no HDFS) 
+ 
 [maria_dev@sandbox-hdp ~]$ hdfs dfs -cat /user/maria_dev/ContaPalavras/part*    (visualizar o resultado)
 A       5
 B       5
