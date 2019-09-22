@@ -30,3 +30,10 @@ if __name__ == '__main__':
    for linha in sys.stdin:
       for palavra in linha.split():
          sys.stdout.write('{}\t1\n'.format(palavra))
+
+
+		 
+		 
+		 
+		 
+		 

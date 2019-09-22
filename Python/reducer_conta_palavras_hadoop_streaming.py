@@ -15,7 +15,16 @@ if __name__ == '__main__':
       else:
          sys.stdout.write('{}\t{}\n'.format(palavra_anterior,contador))
          contador = 1
-
       palavra_anterior = linha.split('\t')[0]
 
    sys.stdout.write('{}\t{}\n'.format(palavra_anterior,contador))
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
